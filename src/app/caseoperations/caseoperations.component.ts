@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { StringopRestapiService } from '../stringop-restapi.service';
 
 @Component({
   selector: 'app-caseoperations',
@@ -8,14 +9,15 @@ import { Component, OnInit } from '@angular/core';
 export class CaseoperationsComponent implements OnInit {
   userinput:string = ""
   result:string = ""
-  constructor() { }
+  constructor(private stringoprequest:StringopRestapiService) { }
 
   ngOnInit(): void {
   }
 
   onSubmit(): void{
-    this.result = this.userinput;
-    console.log(this.userinput)
+    this.stringoprequest.makeUppercase(this.userinput).subscribe((response:string) =>{
+      this.result = response
+    })
   }
   onClear(): void{
     this.userinput = ""
