@@ -1,5 +1,8 @@
 <form action="#">
-     <input type="text" name="ipstring" id="ipstring" [(ngModel)]="userinput">
+     Do Upper Case: <br>
+     <input type="text" name="ipstring" id="ipstring" [(ngModel)]="userinput" placeholder="Enter a string"> <br>
      <input type="button" value="submit" (click)="onSubmit()">
-     <input type="button" value="clear" (click)="onClear()">                                   
+     <span style="margin-left: 2rem;"></span>
+     <input type="button" value="clear" (click)="onClear()">  
+     <p style="font-size:1rem;font-weight: 300;">Output: {{result}}</p>                               
 </form>

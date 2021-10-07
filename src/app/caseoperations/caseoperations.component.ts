@@ -7,17 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CaseoperationsComponent implements OnInit {
   userinput:string = ""
+  result:string = ""
   constructor() { }
 
   ngOnInit(): void {
   }
 
   onSubmit(): void{
+    this.result = this.userinput;
     console.log(this.userinput)
   }
   onClear(): void{
     this.userinput = ""
+    this.result = ""
     console.log("cleared")
   }
-
 }
