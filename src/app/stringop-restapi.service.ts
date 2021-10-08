@@ -11,4 +11,7 @@ export class StringopRestapiService {
   makeUppercase(inputed_string:string): any{
     return this.http.get(this.apiURL+'/doUppercase?string='+inputed_string, {'responseType': 'text'})
   }
+  makeLowercase(inputed_string:string): any{
+    return this.http.get(this.apiURL+'/doLowercase?string='+inputed_string, {'responseType': 'text'})
+  }
 }

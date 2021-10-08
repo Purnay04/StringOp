@@ -13,4 +13,11 @@ public class StringOperationController {
 							  @RequestParam("string") String inputed_string) {
 		return inputed_string.toUpperCase();
 	}
+	
+	@CrossOrigin(origins = "http://localhost:4200")
+	@RequestMapping("/doLowercase")
+	public String DoLowercase(
+							  @RequestParam("string") String inputed_string) {
+		return inputed_string.toLowerCase();
+	}
 }
