@@ -7,10 +7,8 @@ import { StringopRestapiService } from '../stringop-restapi.service';
   styleUrls: ['./caseoperations.component.css']
 })
 export class CaseoperationsComponent implements OnInit {
-  lower_userinput:string = ""
-  upper_userinput:string = ""
-  lower_result:string = ""
-  upper_result:string = ""
+  input_string:string = ""
+  result:string = ""
   constructor(private stringoprequest:StringopRestapiService) { }
 
   ngOnInit(): void {
@@ -18,26 +16,36 @@ export class CaseoperationsComponent implements OnInit {
 
   onSubmit(flag:string): void{
     if(flag == "lower"){
-      this.stringoprequest.makeUppercase(this.lower_userinput).subscribe((response:string) =>{
-        this.lower_result = response
+      this.stringoprequest.makeLowercase(this.input_string).subscribe((response:string) =>{
+        this.result = response
       })
     }
-    else{
-      this.stringoprequest.makeLowercase(this.upper_userinput).subscribe((response:string) =>{
-        this.upper_result = response
+    else if(flag == "upper"){
+      this.stringoprequest.makeUppercase(this.input_string).subscribe((response:string) =>{
+        this.result = response
+      })
+    }
+    else if(flag == "lower_post"){
+      this.stringoprequest.makeLowercasePost(this.input_string).subscribe((response:any) => {
+        console.log(response+typeof response)
+        this.result = response;
+      },
+      (error: any) => {
+        console.log(error)
+      })
+    }
+    else if(flag == "upper_post"){
+      this.stringoprequest.makeUppercasePost(this.input_string).subscribe((response:any) => {
+        console.log(response+typeof response)
+        this.result = response;
+      },
+      (error: any) => {
+        console.log(error)
       })
     }
   }
   onClear(flag:string): void{
-    if(flag == "lower"){
-      this.lower_userinput = ""
-      this.lower_result = ""
-      console.log("lower cleared")
-    }
-    else{
-      this.upper_userinput = ""
-      this.upper_result = ""
-      console.log("upper cleared")
-    }
+    this.input_string = ""
+    this.result = ""
   }
 }

@@ -26,14 +26,14 @@ public class StringOperationController {
 	}
 	
 	@CrossOrigin(origins = "http://localhost:4200")
-	@PostMapping(value= "/doUppercasePOST", consumes = "application/json", produces = "application/json")
+	@PostMapping(value= "/doUppercasePOST", consumes = "application/json")
 	public String DoUppercasePost(
 							  @RequestBody InputString string) {
 		return string.getInput_string().toUpperCase();
 	}
 	
 	@CrossOrigin(origins = "http://localhost:4200")
-	@PostMapping(value= "/doLowercasePOST", consumes = "application/json", produces = "application/json")
+	@PostMapping(value= "/doLowercasePOST", consumes = "application/json")
 	public String DoLowercasePost(
 			@RequestBody InputString string) {
 		return string.getInput_string().toLowerCase();
