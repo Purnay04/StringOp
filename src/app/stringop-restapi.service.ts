@@ -15,11 +15,11 @@ export class StringopRestapiService {
     return this.http.get(this.apiURL+'/doLowercase?string='+inputed_string, {'responseType': 'text'})
   }
 
-  makeUppercasePost(inputed_string:string): any{
-    return this.http.post(this.apiURL+'/doUppercasePOST',{input_string: inputed_string},{responseType: 'text'})
+  makeUppercasePost(inputed_string:JSON): any{
+    return this.http.post(this.apiURL+'/doUppercasePOST',inputed_string,{responseType: 'text'})
   }
 
-  makeLowercasePost(inputed_string:string): any{
-    return this.http.post(this.apiURL+'/doLowercasePOST',{input_string: inputed_string},{responseType: 'text'})
+  makeLowercasePost(inputed_string:JSON): any{
+    return this.http.post(this.apiURL+'/doLowercasePOST',inputed_string,{responseType: 'text'})
   }
 }

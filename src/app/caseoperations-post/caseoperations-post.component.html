@@ -1,0 +1,11 @@
+<form action="#">
+     <H2>String Toggle With Post</H2>
+     <textarea style="padding-left: 10px;width: 15rem;height:3rem;font-size: 20px;" type="text" name="ipstring" id="ipstring" [(ngModel)]="input_string" placeholder="Enter a string"></textarea> <br>
+     <input type="button" value="Do Lower Case Post" (click)="onSubmit('lower')"> 
+     <span style="margin-left: 1rem;"></span>
+     <input type="button" value="Do Upper Case Post" (click)="onSubmit('upper')"> 
+     <span style="margin-left: 1rem;"></span>
+     <input type="button" value="clear" (click)="onClear('lower')"> 
+     <p style="font-size:1rem;font-weight: 300;">Output: {{result}}</p>  
+     <p style="color:red;font-size:20px">{{ERROR}}</p>
+</form>

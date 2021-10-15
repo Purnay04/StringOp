@@ -25,26 +25,8 @@ export class CaseoperationsComponent implements OnInit {
         this.result = response
       })
     }
-    else if(flag == "lower_post"){
-      this.stringoprequest.makeLowercasePost(this.input_string).subscribe((response:any) => {
-        console.log(response+typeof response)
-        this.result = response;
-      },
-      (error: any) => {
-        console.log(error)
-      })
-    }
-    else if(flag == "upper_post"){
-      this.stringoprequest.makeUppercasePost(this.input_string).subscribe((response:any) => {
-        console.log(response+typeof response)
-        this.result = response;
-      },
-      (error: any) => {
-        console.log(error)
-      })
-    }
   }
-  onClear(flag:string): void{
+  onClear(flag:string): void{   
     this.input_string = ""
     this.result = ""
   }

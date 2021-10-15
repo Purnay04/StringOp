@@ -9,3 +9,6 @@ input{
 input[type=text]{
      width:10rem;
 }
+app-root{
+     flex-wrap: wrap;
+}

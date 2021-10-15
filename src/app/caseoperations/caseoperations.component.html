@@ -1,30 +1,10 @@
 <form action="#">
-     <!--
-     Do Upper Case: <br>
-     <input type="text" name="ipstring" id="ipstring" [(ngModel)]="lower_userinput" placeholder="Enter a string"> <br>
-     <input type="button" value="submit" (click)="onSubmit('lower')"> 
-     <span style="margin-left: 2rem;"></span>
-     <input type="button" value="clear" (click)="onClear('lower')">  
-     <p style="font-size:1rem;font-weight: 300;">Output: {{lower_result}}</p>  
-     
-     Do lower Case: <br>
-     <input type="text" name="ipstring" id="ipstring" [(ngModel)]="upper_userinput" placeholder="Enter a string"> <br>
-     <input type="button" value="submit" (click)="onSubmit('upper')"> 
-     <span style="margin-left: 2rem;"></span>
-     <input type="button" value="clear" (click)="onClear('upper')">  
-     <p style="font-size:1rem;font-weight: 300;">Output: {{upper_result}}</p>  
-
-     -->
-     <H1>String Toggle</H1>
+     <H2>String Toggle With Get</H2>
      <input style="padding-left: 10px;" type="text" name="ipstring" id="ipstring" [(ngModel)]="input_string" placeholder="Enter a string"> <br>
      <input type="button" value="Do Lower Case Get" (click)="onSubmit('lower')"> 
      <span style="margin-left: 1rem;"></span>
      <input type="button" value="Do Upper Case Get" (click)="onSubmit('upper')"> 
      <span style="margin-left: 1rem;"></span>
      <input type="button" value="clear" (click)="onClear('lower')">
-     <br>
-     <input type="button" value="Do Lower Case Post" (click)="onSubmit('lower_post')"> 
-     <span style="margin-left: 1rem;"></span>
-     <input type="button" value="Do Upper Case Post" (click)="onSubmit('upper_post')"> 
      <p style="font-size:1rem;font-weight: 300;">Output: {{result}}</p>  
 </form>

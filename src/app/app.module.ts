@@ -6,11 +6,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CaseoperationsComponent } from './caseoperations/caseoperations.component';
+import { CaseoperationsPostComponent } from './caseoperations-post/caseoperations-post.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CaseoperationsComponent
+    CaseoperationsComponent,
+    CaseoperationsPostComponent
   ],
   imports: [
     BrowserModule,
